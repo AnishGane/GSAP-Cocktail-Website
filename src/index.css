@@ -92,7 +92,7 @@ body {
     @apply relative z-10 min-h-dvh w-full border border-transparent;
 
     h1 {
-      @apply md:mt-32 mt-40 text-8xl md:text-[20vw] leading-none text-center font-modern-negra;
+      @apply md:mt-32 mt-40 text-8xl md:text-[18vw] leading-none text-center font-modern-negra;
     }
 
     .left-leaf {
@@ -110,18 +110,18 @@ body {
         @apply flex lg:flex-row flex-col w-full gap-10 justify-between items-center lg:items-end mx-auto;
 
         p:nth-of-type(2) {
-          @apply font-modern-negra text-6xl text-yellow max-w-xl;
+          @apply font-modern-negra text-6xl max-w-xl;
         }
 
         p:last-of-type {
-          @apply 2xl:text-start text-center;
+          @apply 2xl:text-start max-w-2xl   text-center;
         }
 
         .view-cocktails {
-          @apply space-y-5 text-lg lg:max-w-2xs md:max-w-xs w-full;
+          @apply space-y-5 text-lg lg:max-w-sm md:max-w-xs w-full;
 
           p {
-            @apply text-left;
+            @apply text-left w-full;
           }
 
           a {
