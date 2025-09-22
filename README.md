@@ -91,11 +91,7 @@ npm run preview
 
 ## 📸 Screenshots
 
-![Thumbnail](public/readme/thumbnail.png)
-
-Additional references:
-
-- Hero: ![Hero](public/readme/heroimage.png)
+- Hero: ![Hero](public/readme/Heroimage.png)
 - About Us: ![Aboutus](public/readme/Aboutus.png)
 - Art: ![Art](public/readme/Art.png)
 - Cocktails: ![Cocktail Menu](public/readme/CocktailMenu.png)
