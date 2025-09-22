@@ -8,6 +8,8 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Cocktails from "./components/Cocktails";
 import About from "./components/About";
+import Art from "./components/Art";
+import Menu from "./components/Menu";
 
 // Register in the app for global usage
 gsap.registerPlugin(ScrollTrigger, SplitText);
@@ -19,6 +21,8 @@ const App = () => {
       <Hero />
       <Cocktails />
       <About />
+      <Art />
+      <Menu />
     </main>
   );
 };

@@ -2,15 +2,18 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { SplitText } from "gsap/all";
 import React from "react";
+import { FaStar } from "react-icons/fa";
+import { FaStarHalfAlt } from "react-icons/fa";
 
 const About = () => {
   useGSAP(() => {
     const titleSplit = new SplitText("#about h2", { type: "words" });
+    const paragraphSplit = new SplitText(".sub-content p", { type: "words" });
 
     const aboutTimeline = gsap.timeline({
       scrollTrigger: {
         trigger: "#about",
-        start: "top center",
+        start: "top 80%",
       },
     });
 
@@ -21,6 +24,14 @@ const About = () => {
         duration: 1,
         ease: "expo.out",
         stagger: 0.02,
+      })
+      .from(paragraphSplit.words, {
+        opacity: 0,
+        yPercent: 100,
+        duration: 1,
+        ease: "expo.out",
+        stagger: 0.02,
+        delay: -1,
       })
       .from(
         ".top-grid div, .bottom-grid div",
@@ -56,12 +67,53 @@ const About = () => {
             </p>
 
             <div>
-              <p className="text-xl md:text-3xl font-bold">
-                <span>4.5</span>/5
-              </p>
-              <p className="text-sm text-white-100">
-                More than +14069 customers
-              </p>
+              <div className="rating">
+                <div className="stars">
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStarHalfAlt />
+                </div>
+                <div>
+                  <p className="text-xl md:text-3xl font-bold">
+                    <span>4.5</span>/5
+                  </p>
+                  <p className="text-sm text-white-100">
+                    More than +14069 customers
+                  </p>
+                </div>
+              </div>
+              <hr></hr>
+              <div
+                className="peoples"
+                style={{
+                  background:
+                    "linear-gradient(90deg,rgba(38, 38, 38, 1) 0%, rgba(44, 44, 44, 1) 50%, rgba(38, 38, 38, 1) 100%)",
+                }}
+              >
+                <div className="flex items-center -space-x-2">
+                  <img
+                    src="/images/profile1.png"
+                    className="profile"
+                    alt="peoples"
+                  />
+                  <img
+                    src="/images/profile2.png"
+                    className="profile"
+                    alt="peoples"
+                  />
+                  <img
+                    src="/images/profile3.png"
+                    className="profile"
+                    alt="peoples"
+                  />
+
+                  <span className="w-9 h-9 rounded-full bg-[#C9C4FF] text-[10px] font-semibold text-black border-2 border-black flex items-center justify-center">
+                    +12k
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
