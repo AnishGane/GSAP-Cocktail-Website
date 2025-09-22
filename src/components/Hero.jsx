@@ -106,7 +106,12 @@ const Hero = () => {
                 cocktails spirits, fresh and delicious ingredients, and a touch
                 of artistry - designed to delight your sense.
               </p>
-              <a href="#cocktails">View Cocktails</a>
+              <a
+                href="#cocktails"
+                className="bg-black/65 hover:bg-black px-4 py-3"
+              >
+                View Cocktails
+              </a>
             </div>
           </div>
         </div>
