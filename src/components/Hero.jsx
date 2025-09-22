@@ -6,7 +6,6 @@ import { useMediaQuery } from "react-responsive";
 
 const Hero = () => {
   const videoRef = useRef();
-
   const isMobile = useMediaQuery({ maxWidth: 768 });
 
   useGSAP(() => {
@@ -31,29 +30,28 @@ const Hero = () => {
     });
 
     // for left-leaf and right-leaf, triggering in hero section
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: "#hero",
-          start: "top top",
-          end: "bottom top",
-          scrub: true,
-        },
-      })
-      .to(
-        ".right-leaf",
-        {
-          y: 250,
-        },
-        0
-      )
-      .to(
-        ".left-leaf",
-        {
-          y: -250,
-        },
-        0
-      );
+    const leaftl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#hero",
+        start: "top top",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
+    leaftl.to(
+      ".right-leaf",
+      {
+        y: 250,
+      },
+      0
+    );
+    leaftl.to(
+      ".left-leaf",
+      {
+        y: -250,
+      },
+      0
+    );
     //start animation: top of video when reaches to 50% of viewport screen in Mobile and same as to desktop
     const startValue = isMobile ? "top 50%" : "center 60%";
     //end animation: 120% of video when reaches to top of viewport screen in Mobile and same as to desktop

@@ -9,6 +9,7 @@ const Navbar = () => {
       scrollTrigger: {
         trigger: "nav",
         start: "bottom top", //bottom of nav when reaches to top of viewport
+        toggleActions: "play none none reverse", //play on enter, reverse on leave
       },
     });
 
