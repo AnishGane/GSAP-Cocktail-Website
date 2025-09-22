@@ -8,6 +8,7 @@ const Menu = () => {
   const [currentIndex, setCurrentIndex] = React.useState(0);
   const totalCocktails = sliderLists.length;
   const contentRef = useRef();
+
   useGSAP(() => {
     gsap.fromTo("#title", { opacity: 0 }, { opacity: 1, duration: 1 });
     gsap.fromTo(

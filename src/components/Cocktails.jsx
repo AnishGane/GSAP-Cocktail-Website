@@ -22,6 +22,7 @@ const Cocktails = () => {
       y: 100,
     });
   }, []);
+
   return (
     <>
       <section id="cocktails" className="noisy">

@@ -4,6 +4,7 @@ import { SplitText } from "gsap/all";
 import React from "react";
 import { FaStar } from "react-icons/fa";
 import { FaStarHalfAlt } from "react-icons/fa";
+import { profileLists } from "../constants";
 
 const About = () => {
   useGSAP(() => {
@@ -93,25 +94,14 @@ const About = () => {
                 }}
               >
                 <div className="flex items-center -space-x-2">
-                  <img
-                    src="/images/profile1.png"
-                    className="profile"
-                    alt="peoples"
-                  />
-                  <img
-                    src="/images/profile2.png"
-                    className="profile"
-                    alt="peoples"
-                  />
-                  <img
-                    src="/images/profile3.png"
-                    className="profile"
-                    alt="peoples"
-                  />
-
-                  <span className="w-9 h-9 rounded-full bg-[#C9C4FF] text-[10px] font-semibold text-black border-2 border-black flex items-center justify-center">
-                    +12k
-                  </span>
+                  {profileLists.map((profile, index) => (
+                    <img
+                      key={index}
+                      src={profile.imgPath}
+                      className="profile"
+                      alt="peoples"
+                    />
+                  ))}
                 </div>
               </div>
             </div>
