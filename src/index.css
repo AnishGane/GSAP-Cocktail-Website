@@ -361,6 +361,21 @@ body {
     }
   }
 
+  #demo {
+    @apply relative md:min-h-dvh w-full md:mt-40 mt-0 2xl:px-0 px-5 py-20 radial-gradient overflow-hidden;
+
+    h2 {
+      @apply lg:text-6xl 2xl:text-8xl text-5xl font-modern-negra md:w-fit w-full mx-auto leading-none;
+    }
+
+    #demo-para {
+      @apply container mx-auto w-fit mt-5 md:mt-20;
+      p {
+        @apply max-w-2xl mx-auto tracking-wide text-lg;
+      }
+    }
+  }
+
   #contact {
     @apply relative md:mt-20 mt-0 px-4 text-center w-full overflow-hidden radial-gradient;
 

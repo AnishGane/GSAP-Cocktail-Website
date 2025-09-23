@@ -11,6 +11,7 @@ import About from "./components/About";
 import Art from "./components/Art";
 import Menu from "./components/Menu";
 import Contact from "./components/Contact";
+import Demo from "./components/Demo";
 
 // Register in the app for global usage
 gsap.registerPlugin(ScrollTrigger, SplitText);
@@ -24,6 +25,7 @@ const App = () => {
       <About />
       <Art />
       <Menu />
+      <Demo />
       <Contact />
     </main>
   );
